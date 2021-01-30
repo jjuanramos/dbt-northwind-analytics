@@ -33,7 +33,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   northwind:
-      # Applies to all files under models/example/
       staging:
           materialized: view
           +schema: stg
