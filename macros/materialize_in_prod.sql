@@ -6,11 +6,9 @@
     
         {% if target.name == 'prod' %}
 
-            {% set custom_database_name = 'northwind-analytics-prod' %}
+            northwind-analytics-prod
 
         {% endif %}
-
-        {{ custom_database_name }}
 
     {% else %}
 
