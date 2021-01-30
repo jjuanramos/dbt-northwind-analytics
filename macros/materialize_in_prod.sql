@@ -4,11 +4,17 @@
 
     {% if custom_database_name %}
     
-        {% if target.name == 'prod' %}
+        {% if target.name in ['prod'] %}
 
-            northwind-analytics-prod
+            {% set db_suffix = "-prod" %}
+
+        {% else %}
+
+            {% set db_suffix = "-dev" %}
 
         {% endif %}
+
+        northwind-analytics{{db_suffix}}
 
     {% else %}
 
