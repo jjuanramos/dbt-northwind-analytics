@@ -1,16 +1,17 @@
 {% macro generate_database_name(custom_database_name, node) -%}
 
+    {{ log("Running generate database name macro") }}
     {% set default_database = target.database %}
 
     {% if custom_database_name %}
     
-        {% if target.name in ['prod'] %}
+        {% if target.name in ["prod"] %}
 
-            {% set db_suffix = '-prod' %}
+            {% set db_suffix = "-prod" %}
 
         {% else %}
 
-            {% set db_suffix = '' %}
+            {% set db_suffix = "" %}
 
         {% endif %}
 
@@ -22,4 +23,4 @@
 
     {% endif %}
 
-{%- endmacro %}
+{% endmacro %}
