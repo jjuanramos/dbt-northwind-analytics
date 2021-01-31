@@ -19,6 +19,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   northwind:
-      staging:
-          materialized: view
-          +schema: stg
+    +database: northwind-analytics
+    staging:
+        materialized: view
+        +schema: stg
