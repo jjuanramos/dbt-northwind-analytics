@@ -5,14 +5,18 @@
     {% set production_database = 'northwind-analytics-prod' %}
 
     {% if custom_database_name %}
+
     
         {% if target.name in ["prod"] %}
 
             {{ production_database }}
 
-        {% endif %}
+        {% else %}
 
-        {{ custom_database_name }}
+            {{ custom_database_name }}
+
+        {% endif %}
+        
 
     {% else %}
 
