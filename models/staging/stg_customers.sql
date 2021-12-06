@@ -1,1 +1,1 @@
-select * from `northwind-raw.sales_ddbb.Employees`
+select * from {{ source('sales_ddbb', 'Employees') }}
